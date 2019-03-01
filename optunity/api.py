@@ -255,7 +255,7 @@ def optimize(solver, func, maximize=True, max_evals=0, pmap=map, decoder=None):
     time = timeit.default_timer() - time
 
     # TODO why is this necessary?
-    if decoder: solution = decoder(solution)
+    # if decoder: solution = decoder(solution)
 
     optimum = f.call_log.get(**solution)
     num_evals += len(f.call_log)
